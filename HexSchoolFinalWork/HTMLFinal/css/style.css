@@ -1,0 +1,256 @@
+a {
+  text-decoration: none;
+}
+.wrap {
+  /* 把全部加進class中了，還是比較推薦再全部外面包div class="wrap"?*/
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.top {
+  background-color: #f6f6f6;
+  padding: 6px 13px;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.top li {
+  margin: 0 4px;
+}
+.top image {
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+.top .Blue {
+  color: #4460a0;
+}
+.top .Sky_Blue {
+  color: #00aaec;
+}
+
+.top .Sky_Blue::before {
+  content: "|";
+  margin: 0 8px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .logo a {
+  background-image: url(../img/logo.png);
+  display: block;
+  margin-left: 20px;
+  width: 179px;
+  height: 40px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container .menu {
+  display: flex;
+  /*   padding: 17px 0; */
+  margin-right: 10px;
+}
+.container .menu a {
+  /*增加block、隱藏的border    */
+  display: block;
+  margin-left: 23px;
+  padding: 14px 10px;
+  font-size: 14px;
+  color: #22d3a7;
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+}
+.container .menu a:hover {
+  border-bottom: 3px solid #00cc99;
+}
+
+.banner {
+  position: relative;
+  height: 346px;
+  overflow: hidden;
+}
+.banner img {
+  position: absolute;
+  bottom: 0;
+}
+.banner .banner_text {
+  /* 新增box-sizing   */
+  box-sizing: border-box;
+  background: linear-gradient(to right, black, transparent);
+  color: white;
+  width: 100%;
+  font-size: 36px;
+  padding: 38px 23px;
+  line-height: 1.33;
+  position: absolute;
+  top: 94px;
+}
+
+.course {
+  display: flex;
+  /*添加 flex-wrap    */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+.course .subject {
+  width: 260px;
+  padding: 24px 20px;
+  box-shadow: 0 3px 3px #d6d6d6;
+  border-radius: 3px;
+}
+.course .subject img {
+  display: block;
+  margin: 0 auto;
+}
+.course .subject .html {
+  margin-bottom: 12px;
+}
+.course .subject .rwd {
+  margin-top: 23px;
+  margin-bottom: 40px;
+}
+.course .subject .jq {
+  margin-top: 10px;
+  margin-bottom: 21px;
+}
+.course .subject h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.course ul {
+  list-style: disc;
+}
+.course ul li {
+  margin-left: 20px;
+}
+
+.course p {
+  text-align: justify;
+  text-justify: auto;
+}
+
+article h2 {
+  margin-top: 64px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+article .compare {
+  margin: 0 auto;
+  width: 840px;
+  margin-bottom: 60px;
+}
+article .compare th,
+article .compare td {
+  box-sizing: padding-box;
+  padding: 8px 0 12px 22px;
+  font-size: 15px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+.first_term {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+.Green {
+  color: #22d3a7;
+  font-weight: bold;
+}
+
+article .info {
+  padding: 15px 20px 30px 20px;
+  /*   width: 100%; */
+  background: linear-gradient(#00644b, #009872);
+}
+article .info h2 {
+  margin-bottom: 33px;
+  color: white;
+  line-height: 36px;
+}
+.info form {
+  display: flex;
+  justify-content: space-between;
+}
+.info textarea {
+  width: 460px;
+  height: 245px;
+}
+/* 父元素添加清除float */
+.info .clear_float:after {
+  display: table;
+  clear: both;
+}
+
+.info label,
+.info input {
+  display: block;
+}
+.info label {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+#person,
+#tel,
+#mail {
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  width: 460px;
+  border-radius: 3px;
+  border: solid 1px #e1e1e1;
+}
+.info .btn {
+  padding: 5px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: #00cc99;
+  border: 0px;
+  border-radius: 3px;
+  float: right;
+}
+
+.info .btn:hover {
+  /* 添加hover 手感*/
+  background-color: #304a2d;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 54px;
+}
+footer a {
+  margin-top: 26px;
+  margin-left: 20px;
+}
+
+footer li {
+  font-size: 15px;
+}
+footer a {
+  color: #e54991;
+}
+.message {
+  margin-top: 28px;
+}
+.mailbox {
+  margin-bottom: 10px;
+}
+
+.elfsight-app-f7e1333f-af0c-4c46-9d63-502c065d0d50 {
+  width: 100%;
+  text-align: center;
+}

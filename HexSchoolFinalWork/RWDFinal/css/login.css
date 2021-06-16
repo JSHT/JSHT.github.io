@@ -1,0 +1,130 @@
+:root {
+  --main-color: #3d1101;
+  --font-color: #ff5e45;
+}
+
+container .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+container .login h1 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+container .login span {
+  font-size: 20px;
+  display: block;
+  font-weight: 900;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+
+container .login form {
+  width: 300px;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  padding: 1em;
+  border-top: 3px solid var(--font-color);
+}
+
+container .login form h2 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+}
+
+container .login form label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+container .login form input {
+  width: 100%;
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0px 1px 0px 0px #ececec;
+  border-radius: 3px;
+}
+
+container .login form input.email {
+  margin-bottom: 20px;
+}
+
+container .login form .email-group,
+container .login form .password-group {
+  position: relative;
+}
+
+container .login form .email-group::before,
+container .login form .password-group:before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  left: 7px;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+container .login form .email-group::before {
+  content: "\f0e0"; /*看到別人使用偽元素，覺得超厲害*/
+  top: 35%;
+}
+
+container .login form .password-group:before {
+  content: "\f023";
+  top: 50%;
+}
+
+container .login form a {
+  display: block;
+  font-size: 14px;
+  color: var(--font-color);
+  margin-top: 2px;
+}
+
+container .login form a:hover {
+  color: rgb(196, 138, 129);
+}
+
+container .login form .button-group {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+container .login form .button-group button {
+  padding: 0;
+  border-radius: 3px;
+  width: 45%;
+  color: #fff;
+}
+
+container .login form .button-group button a {
+  width: 100%;
+  line-height: 2.5em;
+  color: #fff;
+}
+
+container .login form .button-group .btnReg {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+container .login form .button-group .btnReg:hover {
+  background: #000;
+}
+
+container .login form .button-group .btnLog {
+  background: rgb(223, 117, 20);
+}
+container .login form .button-group .btnLog:hover {
+  background: rgb(218, 10, 10);
+}
