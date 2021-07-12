@@ -1,0 +1,210 @@
+// mixin
+// 標題底線
+@mixin bottom-line($color, $w, $h) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: $w;
+  height: $h;
+  background-color: $color;
+  @content;
+}
+
+// setting
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+// OOCSS
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.mb-72 {
+  margin-bottom: 72px;
+}
+
+.w-m {
+  max-width: 1200px;
+}
+
+.w-s {
+  max-width: 996px;
+}
+
+.roboto {
+  font-family: $Roboto;
+}
+
+.pingFang {
+  font-family: $PingFang;
+}
+
+.relative {
+  position: relative;
+}
+
+.title {
+  margin-bottom: 16px;
+  &::after {
+    @include bottom-line(#000, 100%, 1px);
+  }
+}
+
+.title-l {
+  &::after {
+    @include bottom-line(#fff, 100%, 1px);
+  }
+}
+
+.title-l-s {
+  &::after {
+    @include bottom-line(#fff, 996px, 1px);
+  }
+}
+
+// start
+.wrap {
+  font-family: $NotoSans;
+  font-size: $font-m;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: $font-l;
+  span {
+    color: $red;
+    font-size: $font-m;
+  }
+}
+
+.main {
+  margin-top: 37px;
+}
+
+// main
+.name {
+  position: relative;
+  font-size: $font-ex;
+  line-height: 106px;
+  &::after {
+    @include bottom-line(#000, 100%, 2px);
+  }
+}
+
+.photo {
+  padding: 48px 0;
+  img {
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+// profile
+.profile__list {
+  li {
+    margin-bottom: 24px;
+  }
+}
+
+// education
+.education__list {
+  li {
+    margin-bottom: 24px;
+  }
+}
+
+// skills
+.skills {
+  color: #fff;
+  background: $dark-blue;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.skills__title {
+  margin-bottom: 37px;
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+  }
+  span {
+    color: #fff;
+  }
+}
+
+.skills__list {
+  width: 216px;
+  padding-left: 24px;
+  // border-left: 1px solid $light-blue;
+  li {
+    padding-bottom: 16px;
+  }
+  &::before {
+    @include bottom-line($light-blue, 1px, 100%) {
+      left: 0;
+    }
+  }
+}
+
+// experience
+.experience__list {
+  // border-left: 1px solid $light-blue;
+  margin-left: 24px;
+  padding-left: 24px;
+  li {
+    padding-bottom: 24px;
+  }
+  img {
+    margin: 8px 0;
+  }
+  p {
+    font-size: $font-s;
+  }
+  &::before {
+    @include bottom-line($light-blue, 1px, 100%) {
+      left: 0;
+    }
+  }
+}
+
+// contact
+
+.contact {
+  color: #fff;
+  background: $dark-blue;
+  padding-top: 24px;
+  text-align: center;
+  padding-bottom: 36px;
+}
+
+.contact__title {
+  margin-bottom: 32px;
+  h2 {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+  }
+  span {
+    color: #fff;
+  }
+}
+
+.contact__list {
+  li {
+    padding-bottom: 16px;
+  }
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 0 12px;
+  }
+}
