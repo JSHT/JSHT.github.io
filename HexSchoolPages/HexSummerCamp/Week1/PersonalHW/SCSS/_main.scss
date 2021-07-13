@@ -1,0 +1,170 @@
+// setting
+body {
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, sans-serif;
+  font-size: $font-m;
+  line-height: 1.5;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+// OOCSS
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.mb-72 {
+  margin-bottom: 72px;
+}
+
+.w-m {
+  max-width: 1200px;
+}
+
+.w-s {
+  max-width: 996px;
+}
+
+.roboto {
+  font-family: $Roboto;
+}
+
+.pingFang {
+  font-family: $PingFang;
+}
+
+.relative {
+  position: relative;
+}
+
+.title {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+  border-width: 100%;
+  padding-bottom: 8px;
+}
+
+.bottom-line-w {
+  border-color: #fff;
+}
+
+// start
+h2 {
+  font-size: $font-l;
+  span {
+    color: $red;
+    font-size: $font-m;
+  }
+}
+
+.main {
+  margin-top: 37px;
+}
+
+// main
+.name {
+  position: relative;
+  font-size: $font-ex;
+  line-height: 106px;
+  border-bottom: 2px solid #100;
+  border-width: 100%;
+  padding-bottom: 3px;
+}
+
+.photo {
+  padding: 48px 0;
+  img {
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+// profile
+.profile__list {
+  li {
+    margin-bottom: 24px;
+  }
+}
+
+// education
+.education__list {
+  li {
+    margin-bottom: 24px;
+  }
+}
+
+// skills
+.skills {
+  color: #fff;
+  background: $dark-blue;
+  padding-top: 24px;
+  padding-bottom: 36px;
+  h2{
+    text-align: center;
+    margin-bottom: 37px;
+  }
+  span{
+    color: #fff;
+  }
+}
+
+.skills__list {
+  width: 216px;
+  padding-left: 24px;
+  border-left: 1px solid $light-blue;
+  li {
+    padding-bottom: 16px;
+  }
+}
+
+// experience
+.experience__list {
+  border-left: 1px solid $light-blue;
+  margin-left: 24px;
+  padding-left: 24px;
+  li {
+    padding-bottom: 24px;
+  }
+  img {
+    margin: 8px 0;
+  }
+  p {
+    font-size: $font-s;
+  }
+}
+
+// contact
+
+.contact {
+  color: #fff;
+  background: $dark-blue;
+  padding-top: 24px;
+  text-align: center;
+  padding-bottom: 36px;
+  h2 {
+    margin-bottom: 32px;
+  }
+  span {
+    color: #fff;
+  }
+}
+
+
+.contact__list {
+  li {
+    margin-top: 16px;
+  }
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 12px;
+  }
+}

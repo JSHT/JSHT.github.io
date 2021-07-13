@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="拼拼_魔法拍立得" />
+    <meta
+      property="og:description"
+      content="拍出會動的照片｜LivePhotos 魔法拍立得"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.jpg" />
+    <meta property="og:image:alt" content="LivePhotos" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>拼拼 - LivePhotos</title>
+  </head>
+  <body>
+    <header class="border-bottom border-5 border-warning">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+          <div class="container">
+            <a class="navbar-brand py-0" href="#"
+              ><img
+                src="images/logo.jpg"
+                alt="拼拼Logo"
+                width="111"
+                height="40"
+                class="d-inline-block align-top"
+            /></a>
+            <!-- class="d-inline-block align-top" -->
+            <button
+              class="navbar-toggler border-0 p-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link px-md-4" aria-current="page" href="#"
+                    >關於</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-md-4" href="#">挖寶</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-md-4" tabindex="-1" href="#"
+                    >我有個大膽的想法</a
+                  >
+                </li>
+              </ul>
+              <div class="justify-content-end d-flex">
+                <button
+                  class="btn btn-warning btn-warning-hover me-3 rounded-pill"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login"
+                >
+                  登入
+                </button>
+                <button
+                  class="
+                    btn btn-outline-secondary btn-outline-secondary-hover
+                    rounded-pill
+                    border-2
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#register"
+                >
+                  註冊
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- login form -->
+    <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">登入</h4>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label class="form-label" for="userAccount">帳號</label>
+                <input
+                  class="form-control bg-light border-light"
+                  id="userAccount"
+                  aria-describedby="userAccount"
+                  required
+                />
+                <div class="invalid-feedback">請輸入正確的帳號</div>
+              </div>
+              <div class="mb-2">
+                <label class="form-label" for="userPassword">密碼</label>
+                <input
+                  class="form-control bg-light border-light"
+                  id="userPassword"
+                  aria-describedby="userPassword"
+                  required
+                />
+                <div class="invalid-feedback">請輸入正確的密碼</div>
+              </div>
+              <a href="#" class="d-inline-block mb-2 text-muted">忘記密碼？</a>
+              <div class="d-grid gap-2">
+                <button
+                  class="
+                    btn btn-warning btn-warning-hover
+                    rounded-pill
+                    fs-5
+                    fw-bold
+                    mb-3
+                  "
+                >
+                  登入
+                </button>
+              </div>
+              <div class="position-relative my-4">
+                <div class="progress" style="height: 1px">
+                  <div class="progress-bar" style="width: 0%"></div>
+                </div>
+                <div
+                  class="position-absolute top-0 start-50 translate-middle fs-7"
+                >
+                  <span class="bg-white text-muted px-3"
+                    >還沒有帳號？<a
+                      href="#"
+                      class="text-danger"
+                      data-bs-dismiss="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#register"
+                      >註冊一個帳號</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- register form -->
+    <div class="modal fade" id="register">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">註冊</h4>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label class="form-label" for="userAccount">帳號</label>
+                <input
+                  class="form-control bg-light border-light"
+                  id="userAccount"
+                  aria-describedby="userAccount"
+                  required
+                />
+                <div class="invalid-feedback">請輸入帳號</div>
+              </div>
+              <div class="mb-2">
+                <label class="form-label" for="userPassword">密碼</label>
+                <input
+                  class="form-control bg-light border-light"
+                  id="userPassword"
+                  aria-describedby="userPassword"
+                  required
+                />
+                <div class="invalid-feedback">請輸入密碼</div>
+              </div>
+              <div class="mb-2">
+                <label class="form-label" for="userPassword">確認密碼</label>
+                <input
+                  class="form-control bg-light border-light"
+                  id="userPassword"
+                  aria-describedby="userPassword"
+                  required
+                />
+                <div class="invalid-feedback">請輸入與上方相同的密碼</div>
+              </div>
+              <div class="mt-4 d-grid gap-2">
+                <button
+                  class="
+                    btn btn-warning btn-warning-hover
+                    rounded-pill
+                    fs-5
+                    fw-bold
+                    mb-3
+                  "
+                >
+                  註冊
+                </button>
+              </div>
+              <div class="position-relative my-4">
+                <div class="progress" style="height: 1px">
+                  <div class="progress-bar" style="width: 0%"></div>
+                </div>
+                <div
+                  class="position-absolute top-0 start-50 translate-middle fs-7"
+                >
+                  <span class="bg-white text-muted px-3"
+                    >已有帳號?<a
+                      href="#"
+                      class="text-danger"
+                      data-bs-dismiss="modal"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login"
+                      >登入</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- major project -->
+    <section class="py-3 py-md-5 bg-light">
+      <div class="container">
+        <span class="badge bg-secondary px-3">魔法科技</span>
+        <h1
+          class="fs-lg-2 fs-mobile-1 fw-bold mt-1 mb-0 pb-4 letter-spacing-22"
+        >
+          拍出會動的照片｜LivePhotos 魔法拍立得
+        </h1>
+        <div class="row align-items-center">
+          <div class="col-md-auto col-lg-7">
+            <img
+              src="images/product_image.jpg"
+              alt="LivePhotos 魔法拍立得"
+              class="img-fluid rounded-img"
+            />
+          </div>
+          <div class="col-md col-lg-5">
+            <small class="font-baloo-tamma lh-lg d-block mt-3 mt-md-0"
+              >目標 $600,000</small
+            >
+            <div class="font-baloo-tamma fs-2 lh-sm fw-bold">$280,047</div>
+            <div class="progress rounded-pill">
+              <div
+                class="progress-bar bg-warning text-secondary fs-sm"
+                role="progressbar"
+                style="width: 41%"
+                aria-valuenow="41"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                41%
+              </div>
+            </div>
+            <div class="row mt-3 pt-1 mt-md-4">
+              <div class="col-6">
+                <div class="position-relative">
+                  <small
+                    class="
+                      position-absolute
+                      top-0
+                      start-0
+                      translate-middle-y
+                      fw-normal
+                      pb-md-2
+                    "
+                    >贊助人數</small
+                  >
+                  <span class="font-baloo-tamma fs-2 lh-lg fw-bold">1374</span>
+                  <span class="fs-4 fw-bolder lh-lg">人</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="position-relative">
+                  <small
+                    class="
+                      position-absolute
+                      top-0
+                      start-0
+                      translate-middle-y
+                      fw-normal
+                      pb-md-2
+                    "
+                    >募資倒數</small
+                  >
+                  <span class="font-baloo-tamma fs-2 lh-lg fw-bold">27</span>
+                  <span class="fs-4 fw-bolder lh-lg">天</span>
+                </div>
+              </div>
+              <ul
+                class="
+                  d-flex
+                  justify-content-between justify-content-md-start
+                  list-unstyled
+                  mb-3
+                  mt-2
+                "
+              >
+                <li class="me-0 me-md-3">
+                  <a
+                    href="#"
+                    class="link-dark text-decoration-none"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="認證標章"
+                    ><img
+                      src="images/icon_good01.svg"
+                      alt="認證標章"
+                      class="me-1 square-1 square-md-2"
+                    />
+                    <small class="d-md-none align-bottom">認證標章 </small>
+                  </a>
+                </li>
+                <li class="me-0 me-md-3">
+                  <a
+                    href="#"
+                    class="link-dark text-decoration-none"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="品質保證"
+                    ><img
+                      src="images/icon_good02.svg"
+                      alt="品質保證"
+                      class="me-1 square-1 square-md-2"
+                    />
+                    <small class="d-md-none align-bottom">品質保證 </small>
+                  </a>
+                </li>
+                <li class="me-0 me-md-3">
+                  <a
+                    href="#"
+                    class="link-dark text-decoration-none"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="原生創意"
+                    ><img
+                      src="images/icon_good03.svg"
+                      alt="原生創意"
+                      class="me-1 square-1 square-md-2"
+                    />
+                    <small class="d-md-none align-bottom">原生創意 </small>
+                  </a>
+                </li>
+                <li class="me-0 me-md-3">
+                  <a
+                    href="#"
+                    class="link-dark text-decoration-none"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="人氣王"
+                    ><img
+                      src="images/icon_good04.svg"
+                      alt="人氣王"
+                      class="me-1 square-1 square-md-2"
+                    />
+                    <small class="d-md-none align-bottom">人氣王 </small>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="callout callout-warning bg-white mb-4">
+              專案募資中! <br />
+              在
+              <span class="fw-bold">2021/06/14 23:59</span>
+              募資結束前，您都可以贊助我們!
+            </div>
+            <button
+              class="
+                btn btn-warning btn-warning-hover
+                rounded-pill
+                w-100
+                btn-lg
+                mb-2
+              "
+              onclick="goForm()"
+            >
+              贊助專案
+            </button>
+            <div class="row g-2">
+              <div class="col-6 col-md-7">
+                <button
+                  class="
+                    btn btn-outline-secondary btn-outline-secondary-hover
+                    border-2
+                    w-100
+                    rounded-pill
+                    btn-lg
+                  "
+                >
+                  <i class="fas fa-heart custom-heart"></i>
+                  追蹤專案
+                </button>
+              </div>
+              <div class="col-6 col-md-5">
+                <button
+                  class="
+                    btn btn-outline-secondary btn-outline-secondary-hover
+                    border-2
+                    w-100
+                    rounded-pill
+                    btn-lg
+                  "
+                >
+                  <i class="fas fa-share-alt custom-share"></i>
+                  分享
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tabs-scroll -->
+    <div id="tabs"></div>
+    <!-- tabs -->
+    <div class="border-bottom border-top border-1 sticky-top">
+      <div class="container p-0 px-md-3 bg-white">
+        <ul
+          class="
+            nav
+            d-md-flex
+            justify-content-between justify-content-md-start
+            fs-lg-6 fs-mobile-5
+          "
+          id="myTab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <li class="nav-item">
+            <a
+              href="#intro"
+              class="nav-link link-dark py-3 active"
+              id="intro-tab"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls="intro"
+              aria-selected="true"
+              onclick="goTab()"
+            >
+              <!-- data-bs-target="#intro" -->
+              專案介紹
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#faq"
+              class="nav-link link-dark py-3"
+              id="faq-tab"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls="faq"
+              aria-selected="false"
+              onclick="goTab()"
+            >
+              常見問答
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#progress"
+              class="nav-link link-dark py-3"
+              id="progress-tab"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls="progress"
+              aria-selected="false"
+              onclick="goTab()"
+            >
+              目前進度
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#command"
+              class="nav-link link-dark py-3"
+              id="command-tab"
+              data-bs-toggle="tab"
+              role="tab"
+              aria-controls="command"
+              aria-selected="false"
+              onclick="goTab()"
+            >
+              留言
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container py-4 py-lg-5">
+      <div class="row g-md-5">
+        <div class="col-lg-8">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="intro"
+              role="tabpanel"
+            ></div>
+            <div class="tab-pane fade mb-4" id="faq" role="tabpanel"></div>
+            <div class="tab-pane fade mb-4" id="progress" role="tabpanel"></div>
+            <div class="tab-pane fade mb-4" id="command" role="tabpanel"></div>
+          </div>
+        </div>
+
+        <!-- ads -->
+        <div class="col-lg-4 ads">
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex">
+                <img
+                  src="images/store_img.jpg"
+                  class="border border-warning border-2 rounded-pill"
+                  alt="缺錢事務所"
+                />
+                <div class="d-flex flex-column ms-3 justify-content-center">
+                  <a
+                    href="#"
+                    class="link-gray-700 fs-lg-5 fs-mobile-4 fw-bold pb-2"
+                    >缺錢事務所</a
+                  >
+                  <small class="text-gray-800"
+                    >已發起<strong>1</strong>個專案</small
+                  >
+                </div>
+              </div>
+              <p class="card-text mt-3 text-gray-800 text-justify">
+                需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！
+              </p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                  <a
+                    href="#"
+                    class="
+                      btn-secondary btn-warning-hover
+                      rounded-circle
+                      text-center
+                      me-2
+                      square-3
+                    "
+                    ><i class="fab fa-facebook-f text-white"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="
+                      btn-secondary btn-warning-hover
+                      rounded-circle
+                      text-center
+                      square-3
+                    "
+                    ><i class="fab fa-youtube text-white"></i
+                  ></a>
+                </div>
+                <button
+                  class="
+                    btn btn-outline-secondary btn-outline-secondary-hover
+                    rounded-pill
+                    px-3
+                  "
+                >
+                  <i class="far fa-comment-dots text-secondary"></i>
+                  聯絡我們
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="callout-x callout-warning bg-light text-center fs-5 fw-bold"
+          >
+            選擇一個方案來支持
+          </div>
+          <ul class="list-unstyled">
+            <li class="card mt-3">
+              <img src="images/plan_img.jpg" class="card-img-top" alt="團購優惠" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                  <span class="text-dark fs-sm">限時優惠</span>
+                  <span class="font-baloo-tamma text-dark fs-sm">2 days 20:05:20</span>
+                </div>
+                <h2 class="card-title fs-lg-5 fs-mobile-3 fw-bold">買一送一，只有兩百組別錯過</h2>
+                <p class="font-baloo-tamma fw-bold fs-4 mb-0">
+                  NT$ 1600
+                </p>
+                <span class="badge bg-gray-200 text-secondary">已被贊助88次</span>
+                <span class="badge bg-secondary text-white">限量<span class="text-warning">200</span>個</span>
+                <p class="card-text text-justify text-secondary mt-2 letter-spacing-7">
+                  受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                </p>
+                <button class="btn btn-warning btn-warning-hover rounded-pill w-100" onclick="goForm()">贊助此專案</ㄖ>
+              </div>
+            </li>
+            <li class="card mt-3">
+              <img src="images/plan_img.jpg" class="card-img-top" alt="團購優惠" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                  <span class="text-dark fs-sm">限時優惠</span>
+                  <span class="font-baloo-tamma text-dark fs-sm">2 days 20:05:20</span>
+                </div>
+                <h2 class="card-title fs-lg-5 fs-mobile-3 fw-bold">買一送一，只有兩百組別錯過</h2>
+                <p class="font-baloo-tamma fw-bold fs-4 mb-0">
+                  NT$ 1600
+                </p>
+                <span class="badge bg-gray-200 text-secondary">已被贊助88次</span>
+                <span class="badge bg-secondary text-white">限量<span class="text-warning">200</span>個</span>
+                <p class="card-text text-justify text-secondary mt-2 letter-spacing-7">
+                  受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                </p>
+                <button class="btn btn-warning btn-warning-hover rounded-pill w-100" onclick="goForm()">贊助此專案</ㄖ>
+              </div>
+            </li>
+            <li class="card mt-3">
+              <img src="images/plan_img.jpg" class="card-img-top" alt="團購優惠" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                  <span class="text-dark fs-sm">限時優惠</span>
+                  <span class="font-baloo-tamma text-dark fs-sm">2 days 20:05:20</span>
+                </div>
+                <h2 class="card-title fs-lg-5 fs-mobile-3 fw-bold">買一送一，只有兩百組別錯過</h2>
+                <p class="font-baloo-tamma fw-bold fs-4 mb-0">
+                  NT$ 1600
+                </p>
+                <span class="badge bg-gray-200 text-secondary">已被贊助88次</span>
+                <span class="badge bg-secondary text-white">限量<span class="text-warning">200</span>個</span>
+                <p class="card-text text-justify text-secondary mt-2 letter-spacing-7">
+                  受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                </p>
+                <button class="btn btn-warning btn-warning-hover rounded-pill w-100" onclick="goForm()">贊助此專案</ㄖ>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- sponsorship -->
+        <div class="col-lg-8 mb-2 mb-lg-0">
+          <div class="d-flex justify-content-center">
+            <img src="images/icon_heart.svg" alt="合作" />
+          </div>
+          <div class="position-relative mt-4 my-5">
+            <div class="progress" style="height: 3px">
+              <div class="progress-bar bg-warning" style="width: 100%"></div>
+            </div>
+            <h2
+              class="
+                fs-4
+                fw-bold
+                text-bark
+                bg-white
+                px-3
+                position-absolute
+                start-50
+                top-50
+                translate-middle
+              "
+            >
+              贊助專案
+            </h2>
+          </div>
+          <form id="form" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="program">贊助方案</label>
+              <select
+                class="form-select"
+                id="program"
+                aria-label="Default select"
+                required
+              >
+                <option>請選擇一個方案</option>
+                <option value="1">專案1</option>
+                <option value="2">專案2</option>
+                <option value="3">專案3</option>
+              </select>
+              <div class="invalid-feedback">請選擇一個方案</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="userName" >收件人姓名</label>
+              <input
+                class="form-control"
+                id="userName"
+                type="text"
+                required
+              />
+              <div class="invalid-feedback">請輸入正確的收件人姓名</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="userPhone">聯絡電話</label>
+              <input
+                class="form-control"
+                id="userPhone"
+                type="text"
+                required
+              />
+              <div class="invalid-feedback">請輸入正確的電話號碼</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="userMail">連絡信箱</label>
+              <input
+                class="form-control"
+                id="userMail"
+                type="text"
+                required
+              />
+              <div class="invalid-feedback">請輸入正確的郵件地址</div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label" for="payment">付款方式</label>
+              <select
+                class="form-select"
+                id="payment"
+                aria-label="Default select"
+                required
+              >
+                <option value="1">信用卡付款</option>
+                <option value="2">ATM 轉帳</option>
+                <option value="3">電子支付</option>
+              </select>
+              <div class="invalid-feedback">請輸入付款方式</div>
+            </div>
+            <button
+              class="
+                btn btn-warning btn-warning-hover
+                rounded-pill
+                fw-bold
+                mt-2
+                px-5
+                w-100
+                d-md-none
+              "
+              type="submit"
+            >
+              贊助專案
+            </button>
+            <div class="d-none d-md-flex justify-content-center">
+              <button
+                type="submit"
+                class="
+                  btn btn-warning btn-warning-hover
+                  px-5
+                  fw-bold
+                  rounded-pill
+                  mt-2
+                  fs-5
+                "
+              >
+                贊助專案
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- mobile sponsorship -->
+    <!-- <div class="position-sticky bottom-0" style="z-index: 999;">
+      <button id="MobileSponsorBtn" class="btn btn-warning btn-warning-cover btn-lg fw-bold rounded-0 w-100 d-md-none" onclick="goForm()">贊助專案</button>
+    </div> -->
+    <footer class="container-fluid text-center py-4 text-white bg-gray-700">Copyright © 拼拼 All rights reserved.</footer>
+  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="javascript/all.js"></script>
+</html>
