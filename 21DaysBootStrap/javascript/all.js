@@ -7,10 +7,10 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 // tab load html
 $(document).ready(function () {
-  $("#intro").load("_intro.html");
-  $("#faq").load("_faq.html");
-  $("#progress").load("_progress.html");
-  $("#command").load("_command.html");
+  $("#intro").load("intro.html");
+  $("#faq").load("faq.html");
+  $("#progress").load("progress.html");
+  $("#command").load("command.html");
 });
 
 // validation
