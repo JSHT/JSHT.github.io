@@ -1,0 +1,145 @@
+:root {
+  --main-color: #3d1101;
+  --font-color: #ff5e45;
+}
+container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+container h1 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+container span {
+  font-size: 20px;
+  display: block;
+  font-weight: 900;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+
+container .register {
+  max-width: 620px;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  padding: 1em;
+  border-top: 3px solid var(--font-color);
+}
+
+container .register h2 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+}
+
+container .register .reg-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+container .register .reg-group .term,
+container .register .reg-group form {
+  width: 47%;
+  text-align: left;
+}
+
+container .register .reg-group .term {
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+container .register .reg-group form input {
+  width: 100%;
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0px 1px 0px 0px #ececec;
+  border-radius: 3px;
+  margin: 5px 0;
+  /* text-indent: 2em; */
+}
+
+container .register .reg-group form .email-group {
+  margin-bottom: 20px;
+}
+
+container .register .reg-group form a {
+  font-size: 14px;
+  color: var(--font-color);
+  padding: 2em 0;
+}
+
+container .register .reg-group form .button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+container .register .reg-group form .button-group .btnReg {
+  background: rgb(223, 117, 20);
+  border-radius: 3px;
+  width: 60%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 50px;
+  color: #fff;
+}
+/*
+container .register .reg-group form .button-group .btnReg a {
+  width: 100%;
+  line-height: 1.5em;
+  color: #fff;
+} */
+container .register .reg-group form .button-group .btnReg {
+  background: rgb(223, 117, 20);
+}
+container .register .reg-group form .button-group .btnReg:hover {
+  background: rgb(218, 10, 10);
+}
+
+container .register .reg-group form .email-group,
+container .register .reg-group form .password-group {
+  position: relative;
+}
+
+container .register .reg-group form .email-group::before,
+container .register .reg-group form .password-group::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  left: 7px;
+  top: 42%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+container .register .reg-group form .email-group::before {
+  content: "\f0e0";
+  top: 50%;
+}
+
+container .register .reg-group form .password-group::before {
+  content: "\f023";
+  top: 50%;
+}
+
+@media (max-width: 768px) {
+  container .register .reg-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  container .register .reg-group .term,
+  container .register .reg-group form,
+  container .register .reg-group form .button-group .btnReg {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,227 @@
+:root {
+  --main-color: #3d1101;
+}
+.wrap {
+  font-family: "MicrosoftJhengHeiRegular";
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #efe9e7;
+}
+
+header {
+  background-image: url(https://imgur.com/K58X7OL.png);
+  height: 420px;
+  color: #fff;
+  position: relative;
+  /* 看別人置中banner圖片 */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .navbar {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 42px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header .navbar .logo a {
+  display: block;
+  width: 120px;
+  height: 24px;
+  background-image: url(../images/logo_w.png);
+  background-image: url(../images/logo_w\(null\).svg);
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+header .navbar .menu {
+  display: flex;
+  font-size: 16px;
+}
+
+header .navbar .menu a {
+  display: block;
+  padding: 16px 25px;
+  color: #fff;
+}
+
+header .navbar .menu a:hover {
+  background: gray;
+  color: #000;
+}
+
+header .navbar .mobile {
+  display: none;
+  border: 2px #fff solid;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+header .navbar .mobile .fa-bars {
+  color: #fff;
+  font-size: 20px;
+}
+
+header .banner {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1.5em;
+}
+
+header .banner h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+header .banner p {
+  margin-top: 1em;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+@media (max-width: 600px) {
+  header {
+    background-image: url(https://imgur.com/2IAPoWp.png);
+  }
+
+  header .navbar .mobile {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header .navbar .menu a {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  header .navbar .menu {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    display: block;
+    transition: all 1s;
+    z-index: 100;
+  }
+
+  header .navbar .menu.show {
+    max-height: 500px;
+  }
+  header .navbar .menu a {
+    text-align: center;
+  }
+  header .banner {
+    width: 100%;
+  }
+}
+
+footer {
+  display: flex;
+  padding: 50px 43px;
+  color: var(--main-color);
+}
+
+footer .info {
+  display: flex;
+  line-height: 1.5em;
+}
+
+footer .info h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+footer .info p {
+  font-size: 16px;
+}
+
+footer .info .about {
+  width: 45%;
+}
+
+footer .info .contact {
+  width: 45%;
+  margin-left: 2em;
+}
+
+footer .info .contact ul {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
+footer .social .footerLogo a {
+  display: block;
+  width: 243px;
+  height: 49px;
+  background-image: url(../images/logo_l.png);
+  background-image: url(../images/logo_l@svg.svg);
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+footer .social ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .social ul a {
+  font-size: 36px;
+  text-align: right;
+}
+
+footer .social .icon {
+  margin: 0 6px;
+  margin-top: 22px;
+}
+
+footer .social .icon-google {
+  color: #db4437;
+}
+
+footer .social .icon-twitter {
+  color: #41abe1;
+}
+
+footer .social .icon-fb {
+  color: #3a5795;
+}
+
+@media (max-width: 767px) {
+  footer .info {
+    display: block;
+  }
+  footer .info .about,
+  footer .info .contact {
+    width: 100%;
+    margin-top: 6%;
+  }
+
+  footer .info .contact {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: block;
+  }
+  footer .social {
+    width: 100%;
+    margin: 6% auto;
+  }
+}
