@@ -5,12 +5,12 @@
 
 | **colors** | **theme-color** | **spacers** |
 | -------- | -------- | -------- |
-| `gray-300:   #E6E6E6` | `main: $brown` | `6: $spacer * 15 / 4` |
-| `gray-400:   #E0E0E0` | `light-main: $lightbrown` | `7: $spacer * 7` |
-| `gray-600:   #8D8D8D` |      |      |
-| `gray-700:   #707070` |      |      |
-| `brown:      #916000` |      |      |
-| `lightbrown: #AC8A46` |      |      |
+| `gray-300:` <font color="#E6E6E6">#E6E6E6</font> | `main:` <font color="#916000">$brown</font> | `6: $spacer * 15 / 4` |
+| `gray-400:` <font color="#E0E0E0">#E0E0E0</font> | `light-main:` <font color="#916000">$light-brown</font> | `7: $spacer * 7` |
+| `gray-600:` <font color="#8D8D8D">#8D8D8D</font> |      |      |
+| `gray-700:` <font color="#707070">#707070</font> |      |      |
+| `brown:` <font color="#916000">#916000</font> |      |      |
+| `light-brown:` <font color="#AC8A46">#AC8A46</font> |      |      |
 
 
 
