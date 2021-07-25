@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      You can find the source code on<br />
+      <a href="https://www.instagram.com/gabrielcojea/" class="underline"
+        >codepen.io/gabrielcojea</a
+      >
+    </p>
+  </body>
+  <style>
+    .underline {
+      position: relative;
+    }
+
+    .underline::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #0074d9;
+      transition: width 0.6s;
+    }
+
+    .underline:hover::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  </style>
+</html>

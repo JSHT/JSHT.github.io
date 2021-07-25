@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="d'Perfume - Product" />
+    <meta property="og:description" content="d'Perfume, perfume your day" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/d’Perfume.png" />
+    <meta property="og:image:alt" content="d'Perfume" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>D'PERFUME</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header position-sticky sticky-top bg-white py-1 px-0">
+      <div class="container-md container-fluid container-wrap px-0">
+        <div class="navbar navbar-expand-md navbar-light">
+          <h1 class="ps-6 ps-md-0">
+            <a href="index.html" class="logo">d'Perfume</a>
+          </h1>
+          <a
+            class="
+              mobile-cart
+              position-relative
+              ms-auto
+              d-block d-md-none
+              cursor-pointer
+              me-3
+            "
+            href="#"
+          >
+            <span class="fs-5 text-secondary"
+              ><i class="fas fa-shopping-cart"></i
+            ></span>
+            <span
+              class="badge bg-main rounded-circle p-1 d-flex align-items-center"
+              ><span>3</span></span
+            >
+          </a>
+          <button
+            class="navbar-toggler border-0 px-6"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="fs-1"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-0 text-center fs-5">
+              <li class="nav-item text-secondary">
+                <a class="nav-link p-3" href="./product.html"
+                  ><i
+                    class="fas fa-store-alt me-1 d-none d-md-inline-block fs-6"
+                  ></i
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item text-secondary d-none d-md-block">
+                <a class="nav-link p-3" href="./login.html"
+                  ><i class="fas fa-user me-1 fs-6"></i>log in</a
+                >
+              </li>
+              <li class="nav-item text-secondary">
+                <a class="nav-link p-3" href="#"
+                  ><i
+                    class="fas fa-heart me-1 d-none d-md-inline-block fs-6"
+                  ></i
+                  >Wishlist</a
+                >
+              </li>
+              <li class="nav-item d-blcok d-md-none">
+                <a class="nav-link p-3" href="#">Blog</a>
+              </li>
+              <li class="nav-item d-blcok d-md-none">
+                <a class="nav-link p-3" href="#">Contact</a>
+              </li>
+              <li class="nav-item d-blcok d-md-none">
+                <a class="nav-link p-3" href="./login.html">log in</a>
+              </li>
+              <li class="nav-item text-secondary d-none d-md-block">
+                <a class="nav-link p-3 pe-md-0" href="#"
+                  ><i class="fas fa-shopping-cart me-1 fs-6"></i>Cart(3)</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- productList start -->
+      <div class="subHeader bg-main py-9 d-none d-md-block">
+        <div class="container container-wrap px-0">
+          <ul class="container container-wrap d-flex list-unstyled fs-5 px-0">
+            <li class="ps-0 pe-9"><a href="#" class="text-white">CHANEL</a></li>
+            <li class="px-9"><a href="#" class="text-white">Jo Malone</a></li>
+            <li class="px-9"><a href="#" class="text-white">Curology</a></li>
+            <li class="px-9"><a href="#" class="text-white">Dior</a></li>
+            <li class="px-9"><a href="#" class="text-white">Chloe</a></li>
+            <li class="px-9"><a href="#" class="text-white">ZARA</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- productList end -->
+    </header>
+    <!-- header end -->
+    <!-- product start -->
+    <section class="py-11 py-md-7 my-md-6 px-3">
+      <div class="container container-wrap px-0" id="app" v-once>
+        <ul class="row list-unstyled gx-3 gy-10 gy-md-7 mb-0">
+          <li
+            class="col-6 col-sm-4 col-md-3"
+            v-for="(item, key) in products"
+            :key="key"
+          >
+            <!-- {{ item.name }} {{ key }} -->
+            <div class="card h-100 border-0">
+              <img
+                :src="item.imageUrl"
+                :alt="item.name"
+                class="img-cover product__img position-relative"
+              />
+              <a
+                :href="item.url"
+                class="d-block position-absolute product__img-mask"
+              ></a>
+              <div class="card-body p-0">
+                <h4 class="card-title d-flex align-items-center mb-0 fw-600">
+                  {{ item.name }}
+                </h4>
+                <p class="fw-light d-block fw-light">{{ item.brand }}</p>
+                <p class="fw-light me-2 d-inline-block fw-light">
+                  {{ item.price }}
+                </p>
+                <del
+                  class="fw-light text-secondary d-inline-block fw-light"
+                  v-if="item.discount"
+                >
+                  {{ item.discount }}
+                </del>
+              </div>
+              <div class="d-flex">
+                <button
+                  type="button"
+                  class="btn border-0 p-0 me-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-wishlist"
+                >
+                  <i class="fas fa-heart fs-5 text-main d-inline-block"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn border-0 p-0 ms-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-cart"
+                >
+                  <i class="fas fa-shopping-cart fs-5 text-main"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- product end -->
+    <!-- modal start -->
+    <div class="modal fade" id="add-wishlist" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-dialog-centered d-flex justify-content-center"
+      >
+        <div class="modal-content py-3 w-50 w-md-100">
+          <h5 class="text-main text-center fw-600 mb-0">已加入我的收藏</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="add-cart" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-dialog-centered d-flex justify-content-center"
+      >
+        <div class="modal-content py-3 w-50 w-md-100">
+          <h5 class="text-main text-center fw-600 mb-0">已加入購物車</h5>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- page navigation start -->
+    <nav aria-label="Page navigation" class="mb-11 mb-md-7">
+      <ul class="pagination d-flex justify-content-center fs-5">
+        <li class="page-item active">
+          <a class="page-link border-0" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link border-0" href="#">2</a></li>
+        <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+      </ul>
+    </nav>
+    <!-- page navigation end -->
+
+    <!-- subscribe start -->
+    <section class="subscribe bg-cover d-flex align-items-end pb-8">
+      <div class="container container-wrap">
+        <form id="form" class="subscribe__form">
+          <label
+            for="subscribe"
+            class="form-label text-secondary fw-600 mb-4 fs-1 ping-fang"
+            >記得<br />訂閱以獲取更多資訊！
+          </label>
+          <div class="row">
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control border border-main border-2 py-3 ps-3"
+                  placeholder="Your email address"
+                  id="subscribe"
+                  required
+                />
+                <button class="btn btn-main py-3 px-4" type="submit">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- subscribe end -->
+
+    <!-- footer start -->
+    <footer class="footer bg-main py-3 px-0">
+      <div
+        class="
+          container container-wrap
+          d-flex
+          align-items-center
+          text-white
+          ps-0
+          pe-md-0
+        "
+      >
+        <h1 class="ps-6 ps-md-0">
+          <a href="index.html" class="footer__logo">d'Perfume</a>
+        </h1>
+        <p class="ms-md-3 ms-auto fw-medium fs-7">
+          © 2020. All Rights Reserved.
+        </p>
+        <ul class="d-none d-md-flex list-unstyled ms-auto mb-0 fs-5">
+          <li class="px-3">
+            <a href="./product.html" class="text-white">Product</a>
+          </li>
+          <li class="px-3">
+            <a href="#" class="text-white">Blog</a>
+          </li>
+          <li class="ps-3 pe-0">
+            <a href="#" class="text-white">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"
+    integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.4/vue.global.min.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        // 資料集
+        return {
+          products: {
+            1: {
+              imageUrl: "./images/products1.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            2: {
+              imageUrl: "./images/products2.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            3: {
+              imageUrl: "./images/products3.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+            4: {
+              imageUrl: "./images/products4.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+            5: {
+              imageUrl: "./images/products5.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            6: {
+              imageUrl: "./images/products6.jpg",
+              url: "./products/Chanel/N°5.html",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            7: {
+              imageUrl: "./images/products7.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+            8: {
+              imageUrl: "./images/products8.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+            9: {
+              imageUrl: "./images/products9.png",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            10: {
+              imageUrl: "./images/products10.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+              discount: "NT$1,580",
+            },
+            11: {
+              imageUrl: "./images/products11.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+            12: {
+              imageUrl: "./images/products12.jpg",
+              name: "Poppy & Barley",
+              brand: "Jo Malone",
+              price: "NT$1,380",
+            },
+          },
+        };
+      },
+      methods: {
+        // 方法集
+      },
+      mounted() {},
+    });
+    app.mount("#app");
+  </script>
+</html>
